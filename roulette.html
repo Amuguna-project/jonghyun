@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/style.css">
+        <style>
+            #판{
+                width: 1000px;
+                height: 1000px;
+                overflow: hidden;
+                position: relative;
+            }
+            #핀{
+                width:0;
+                height: 0;
+                top: 170px;
+                left: calc(50% - 16px);
+                position: absolute;
+                border-radius: 32px 32px 0 0;
+                border-top: 70px solid crimson;
+                border-left: 16px solid transparent;
+                border-right: 16px solid transparent;
+                border-bottom: 0;
+                z-index :1;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="판">
+            <div id="핀"></div>
+            <canvas id="canvas" width="1000px" height="1000px"></canvas>
+        </div>
+        <script src="../js/roulette.js"></script>
+    </body>
