@@ -1,7 +1,9 @@
 const foodList = document.querySelector(".food-list"),
         foodInput = foodList.querySelector("input"),
-        createRoulette = document.querySelector(".create-roulette"),
-        createBtn = createRoulette.querySelector("input");
+        
+        createBtn = document.querySelector(".create-roulette"),
+        product_list = document.querySelector(".roulette_products");
+
 let products = new Array();
 
 function paintProducts(name){
@@ -11,7 +13,17 @@ function paintProducts(name){
     (16)
   }
   products.push(product);
-  console.log(products);
+  console.log(product.name);
+  add_text(product.name);
+}
+
+function add_text(product){
+  const li = document.createElement("li");
+  const span = document.createElement("span");
+  span.innerText = product;
+  li.appendChild(span);
+  console.log(li);
+  product_list.appendChild(li);
 }
 
 function draw(){
@@ -48,6 +60,7 @@ function draw(){
     'transitionend':function() {alert('오늘은 이거닷!');}
   });
 }
+
 function handleSubmit(event){
   event.preventDefault();
   const currentValue = foodInput.value;

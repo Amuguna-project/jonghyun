@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./css/accounts.css">
+    <link rel="stylesheet" href="../common.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <script src="./js/accounts.js"></script>
+    
+</head>
+<body>
+
+    <div id="wrap">
+        <div id="container">
+            <div id="main">
+                <div id="content">
+                    <div class="accounts_join">
+                        <div class="form_join">
+                            <form action="" method="POST">
+                                <div class="form_head">
+                                    <h2 class="tit">JOIN</h2>
+                                </div>
+
+                                <table class="form_table">
+                                    <tbody>
+                                        <tr class="join_id">
+                                            <th>
+                                                아이디
+                                            </th>
+                                            <td>
+                                                <input type="text" class="form_input form_id"  placeholder="아이디를 입력해주세요" onfocus="requirement(0)" onkeyup="id_check(0)">
+                                                <a class="btn">중복확인</a>
+                                                <p class="use_check">
+                                                    <span class="req case1">
+                                                        6자 이상의 영문 혹은 영문과 숫자를 조합
+                                                    </span>
+                                                    <span class="req case2">
+                                                        아이디 중복확인
+                                                    </span>
+                                                </p>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="join_pw">
+                                            <th>
+                                                비밀번호
+                                            </th>
+                                            <td>
+                                                <input type="password" class="form_input form_pw" placeholder="비밀번호를 입력해주세요" onfocus="requirement(1)" onkeyup="pw_check(1)">
+                                                <p class="use_check">
+                                                    <span class="req case1">
+                                                        8자 이상 입력해주세요
+                                                    </span>
+                                                    <span class="req case2">
+                                                        영문+숫자+특수문자(-제외) 를 조합
+                                                    </span>
+                                                </p>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="join_pw2">
+                                            <th>
+                                                비밀번호 확인
+                                            </th>
+                                            <td>
+                                                <input type="password" class="form_input form_pw2" placeholder="비밀번호를 다시 입력해주세요" onfocus="requirement(2)" onkeyup="pw2_check(2)">
+                                                <p class="use_check">
+                                                    <span class="req case1">
+                                                        동일한 비밀번호를 입력해주세요
+                                                    </span>
+                                                    
+                                                </p>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="join_email">
+                                            <th>
+                                                이메일
+                                            </th>
+                                            <td>
+                                                <input type="text" class="form_input form_email" placeholder="이메일을 입력해주세요" onfocus="requirement(3)" onkeyup="email_check(3)">
+                                                <a class="btn">중복확인</a>
+                                                <p class="use_check">
+                                                    
+                                                    <span class="req case1">
+                                                        이메일 중복확인
+                                                    </span>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="join_submit">
+                                    <button type="submit" class="join_btn">가입하기</button>
+                                </div>
+                                
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

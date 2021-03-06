@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amuguna</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <script src="./main.js"></script>
+
+    <script>
+        function popup_address_add(Url){    //배송지 추가
+            var popupX = (window.screen.width / 2) - (530 / 2);   // 팝업창을 가운데 띄우기 위한거
+            var popupY = (window.screen.height / 2) - (400 / 2);
+            var url = Url;        // 주소검색 띄울 html url 적어주세욤 !
+            var name = "popup test";
+            var option = "width = 830, height = 450, top = " + popupY + " , left = " + popupX + " , location = no"
+            window.open(url, name, option);
+        }
+    </script>
+
+</head>
+<body>
+    <nav class="center-align inline-block">
+        <ul class="inline-block">
+            <li id="roulette">
+                <button onclick="popup_address_add('../룰렛/roulette.html')">
+                    <span>룰렛</span>
+                </button>
+            </li>
+            <div class="ladder">
+                <button onclick="popup_address_add('../사다리타기/index.html')">
+                    <span>사다리타기</span>
+                </button>
+            </div>
+            <li id="log-in">
+                <a href="">
+                    <button>로그인</button>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div id="container">
+
+            <div class="fst">
+                <div class="start">
+                    <div class="start_name">
+                        <span>시작</span>
+                    </div>   
+                </div>
+            </div>
+            <!-- 카카오 지도 검색 api-->
+            <!-- <div id="map" style="width:500px;height:400px;"></div> -->
+            <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9727a86c60204288ab7078dd878b489a"></script>
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script> -->
+            <!-- <script>
+                var container = document.getElementById('map');
+                var options = {
+                    center: new kakao.maps.LatLng(33.450701, 126.570667),
+                    level: 3
+                };
+    
+                var map = new kakao.maps.Map(container, options);
+            </script> -->
+    
+            
+    
+            <div class="bg_loading" id="bgLoading" style="display: none;">
+                <div class="loading_show"></div>
+            </div>
+            
+        
+            <div id="contents" style="display:none;">
+                <div class="contents_option">
+                    <div class="inner_option">
+                        <div>
+                            <h2 class="tit">아무거나</h2>
+                        </div>
+                        
+                        <div class="big_box box" style="display:block;"> <!-- 큰 카테고리-->
+                            <div class="option top left">
+                                <div class="name size">
+                                    <span>한식</span>
+                                    <input type="hidden" value="korea">
+                                </div>
+                            </div>
+    
+                            <div class="option bottom left">
+                                <div class="name size">
+                                    <span>중식</span>
+                                    <input type="hidden" value="china">
+                                </div>
+                            </div>
+    
+                            <div class="option top right">
+                                <div class=" name size">
+                                    <span>일식</span>
+                                    <input type="hidden" value="japen">
+                                </div>
+                            </div>
+    
+                            <div class="option bottom right">
+                                <div class=" name size">
+                                    <span>양식</span>
+                                    <input type="hidden" value="america">
+                                </div>
+                            </div>
+    
+                            
+                        </div>
+    
+                        <div class="korea_box box" style="display:none;">   <!-- 한식-->
+                            <div class="soup option topLeft">
+                                <a href="https://map.kakao.com/link/search/찌개" target="__blank">
+                                    <div class="name size">
+                                        <span>찌개</span>                                
+                                    </div>
+                                </a>
+                            </div>
+    
+                            <div class="rice option topLeft">
+                                <a href="https://map.kakao.com/link/search/국밥" target="__blank">
+                                    <div class="name size">
+                                        <span>국밥</span>                                
+                                    </div>
+                                </a>
+                            </div>
+    
+                            <div class="schoolFood option topLeft">
+                                <a href="https://map.kakao.com/link/search/분식" target="__blank">
+                                    <div class="name size">
+                                        <span>분식</span>                                
+                                    </div>
+                                </a>
+                            </div>
+    
+                            <div class="jjim option topLeft">
+                                <a href="https://map.kakao.com/link/search/감자탕" target="__blank">
+                                    <div class="name size">
+                                        <span>감자탕</span>                                
+                                    </div>
+                                </a>
+                            </div>
+    
+                            <div class="hocks option topLeft">
+                                <a href="https://map.kakao.com/link/search/족발" target="__blank">
+                                    <div class="name size">
+                                        <span>족발</span>                                
+                                    </div>
+                                </a>
+                            </div>
+    
+                            <div class="lunchbox option topLeft">
+                                <div class="name size">
+                                    <span>도시락</span>
+                                </div>
+                            </div>
+    
+                            
+                        </div>
+    
+                        <div class="china_box box" style="display:none;">   <!-- 중식-->
+                            <div class="cotton option topLeft">
+                                <div class="name size">
+                                    <span>면</span>
+                                </div>
+                            </div>
+    
+                            <div class="rice option topLeft">
+                                <div class="name size">
+                                    <span>밥</span>
+                                </div>
+                            </div>
+    
+                            <div class="Food option topLeft">
+                                <div class="name size">
+                                    <span>요리</span>
+                                </div>
+                            </div>
+    
+                            <div class="fried option topLeft">
+                                <div class="name size">
+                                    <span>튀김</span>
+                                </div>
+                            </div> 
+                        </div>
+    
+                        <div class="japen_box box" style="display:none;">   <!-- 일식-->
+                            <div class="cotton option topLeft">
+                                <div class="name size">
+                                    <span>면</span>
+                                </div>
+                            </div>
+    
+                            <div class="rawFish option topLeft">
+                                <div class="name size">
+                                    <span>회</span>
+                                </div>
+                            </div>
+    
+                            <div class="bowlRice option topLeft">
+                                <div class="name size">
+                                    <span>덮밥</span>
+                                </div>
+                            </div>
+    
+                            <div class="fried option topLeft">
+                                <div class="name size">
+                                    <span>튀김</span>
+                                </div>
+                            </div> 
+                        </div>
+    
+                        <div class="america_box box" style="display:none;">   <!-- 양식-->
+                            <div class="pasta option topLeft">
+                                <div class="name size">
+                                    <span>파스타</span>
+                                </div>
+                            </div>
+    
+                            <div class="steak option topLeft">
+                                <div class="name size">
+                                    <span>스테이크</span>
+                                </div>
+                            </div>
+    
+                            <div class="filaf option topLeft">
+                                <div class="name size">
+                                    <span>필라프</span>
+                                </div>
+                            </div>
+    
+                            <div class="fastFood option topLeft">
+                                <div class="name size">
+                                    <span>패스트푸드</span>
+                                </div>
+                            </div> 
+                        </div>
+    
+                        
+                    </div>
+                </div>
+            </div>
+    
+    
+            
+        
+            
+            
+        
+            
+    
+    
+        </div>
+
+    </main>
+</body>
+</html>
