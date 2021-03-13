@@ -1,5 +1,5 @@
 const foodList = document.querySelector(".food-list"),
-        foodInput = foodList.querySelector("input"),
+        foodInput = document.querySelector(".input-food"),
         
         createBtn = document.querySelector(".create-roulette"),
         product_list = document.querySelector(".roulette_products");
@@ -71,7 +71,6 @@ function handleSubmit(event){
 function handleClick(){
   draw();
 }
-
 
 function init(){
     foodList.addEventListener("submit",handleSubmit);
