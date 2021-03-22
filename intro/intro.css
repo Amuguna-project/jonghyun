@@ -1,14 +1,193 @@
-body, html{
-    padding: 0;
-    margin: 0;
+*{ 
+    margin:0;
+    padding:0;
+    text-decoration:none
+}
+
+header{
+    width:100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+li{
+    list-style:none
+}
+
+header .inner{
+    width: 100%;
+    height: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .inner .right .login-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+}
+
+header .inner .right .login-button:hover{
+    background-color: #fff;
+}
+
+.login-button svg{
+    margin-right: 5px;
 }
 
 
-.Section-container{
-
+.product_con{
+    position: relative;
+    width:100vw;
+    height: 500px;
+    margin:0 auto;
 }
 
-@media (max-width: 767px)
-.ant-layout-header{
-    height: 60px;
+.product_con .product_list{
+    overflow:hidden;
+    position:relative;
+    width: 100%;
+    height: 100%;
 }
+
+.product_con .product_list li{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+}
+
+.product_con .product_list li:nth-child(1){
+    left:0px;
+}
+
+.product_con .product_list li:nth-child(2){
+    left:200px;
+}
+
+.product_con .product_list li:nth-child(3){
+    left:200px;
+}
+
+.product_con .product_list li:nth-child(4){
+    left:200px;
+}
+
+.product_con .product_list li:nth-child(5){
+    left:200px;
+}
+
+.product_con .product_list li a {
+	display:block;
+    width:100%;
+    height:100%;
+	background: red;
+    font-size:150px;
+    color: #fff;
+	text-align: center;
+    padding-top: 155px;
+}
+
+ .product_con .product_list li:nth-child(1) a{
+    background:#65f078;
+    left: -200px
+}
+
+.product_con .product_list li:nth-child(2) a{
+    background:#f5da5c
+}
+
+.product_con .product_list li:nth-child(3) a{
+    background:#fe719c;
+    left:200px;
+}
+.product_con .product_list li:nth-child(4) a{
+    background:#10A8AB;
+    left:200px;
+}
+.product_con .product_list li:nth-child(5) a{
+    background:#A1305E;
+    left:200px;
+}
+
+.product_con .btn_prev,.product_con .btn_next { 
+    position:absolute;
+    top:100px;
+}
+
+.product_con .btn_prev { 
+    left:0px;
+}
+
+.product_con .btn_next {
+     right:0px;
+}
+
+.numlist {
+    width:105px;
+    margin:0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
