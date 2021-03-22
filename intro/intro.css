@@ -4,6 +4,10 @@
     text-decoration:none
 }
 
+.relative{
+    position: relative;
+}
+
 header{
     width:100vw;
     position: fixed;
@@ -24,6 +28,14 @@ header .inner{
     align-items: center;
 }
 
+header .inner .left{
+    padding: 10px 0 0 10px;
+}
+
+header .inner .right{
+    padding : 10px 10px 0 0;
+}
+
 header .inner .right .login-button{
     display: flex;
     align-items: center;
@@ -42,11 +54,37 @@ header .inner .right .login-button:hover{
     margin-right: 5px;
 }
 
+.start{
+    display: inline-block;
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    z-index: 9999;
+}
+
+.start a{
+    border: 1px solid white;
+    border-radius: 30px;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.start a:hover{
+    background-color: #fff;
+}
+
+.start a span{
+    font-size: large;
+}
 
 .product_con{
     position: relative;
     width:100vw;
-    height: 500px;
+    height: 650px;
     margin:0 auto;
 }
 
