@@ -1,7 +1,7 @@
 *{ 
     margin:0;
     padding:0;
-    text-decoration:none
+    text-decoration:none;
 }
 
 .relative{
@@ -84,7 +84,7 @@ header .inner .right .login-button:hover{
 .product_con{
     position: relative;
     width:100vw;
-    height: 650px;
+    height: 100vh;
     margin:0 auto;
 }
 
@@ -171,6 +171,11 @@ header .inner .right .login-button:hover{
 .numlist {
     width:105px;
     margin:0 auto;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 96%;
+    transform: translateX(-50%);
 }
 
 
