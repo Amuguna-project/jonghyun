@@ -55,5 +55,7 @@ $(function(){
     }
 
     $('.numlist a').on('click', indicate)
-
+    startBanner = setInterval(function(){
+        nextItem();
+    },3000);
 });
