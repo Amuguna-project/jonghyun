@@ -93,13 +93,74 @@
                                 </div>
                                 <div>
                                     <div class="name"><a href="#">사용자이름</a></div>
-                                    <div class="time">올린이후 지난 시간</div> 
+                                    <div class="time">올린 시간</div> 
                                 </div>
-                                <div class="more">
-
+                                <div class="more" data-name="more">
+                                    <span class="icon-more"></span>
+                                    <ul class="hidden_menu">
+                                        <li>
+                                            <a href="*">수정하기</a>
+                                        </li>
+                                        <li>
+                                            <input type="button" value="삭제">
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </header>
+                        <div class="main_article">
+                            오늘 저녁 치맥 ㄱ?
+                        </div>
+                        <div class="img_section">
+                            <a href="#"><img src="../imgs/loading.gif" alt=""></a>
+                        </div>
+                        <div class="ajax_field">
+                            <div class="like">
+                                좋아요
+                                <span class="like_count" id="like-count">1</span>
+                                개
+                            </div>
+                            <div class="comment">
+                                댓글
+                                <span class="comment_count">1</span>
+                                개
+                            </div>
+                        </div>
+                        <div class="btn_container">
+                            <div class="like_btn" data-name="like">
+                                <span class="icon-like"></span>
+                                좋아요
+                            </div>
+                            <div class="comment_btn" data-name="comment">
+                                <span class="icon-comment"></span>
+                                댓글
+                            </div>
+                        </div>
+                        <div class="comment_container">
+                            <div class="id">
+                                <div class="profile_img">
+                                    <img src="../imgs/loading.gif" alt="">
+                                </div>
+                                <div class="comment_field">
+                                    <div class="text_container">
+                                        <div class="name"><a href="">지호</a></div>
+                                        <div class="text_field">국밥 ㄱ</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment_input">
+                            <div class="profile_img">
+                                <img src="../imgs/loading.gif" alt="">
+                            </div>
+                            <div class="input_container">
+                                <label for="comment"></label>
+                                <input type="text" id="comment" placeholder="댓글을 입력하세요..">
+                                <button class="send" data-name="send">
+                                    <span class="icon-comment"></span>
+                                </button>
+                            </div>
+                        </div>
                     </article>
                 </section>
             </div>

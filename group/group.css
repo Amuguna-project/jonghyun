@@ -55,12 +55,31 @@ a:hover {
 
 .icon-picture{
     display: inline-block;
-    background: url('../imgs/spr_icons_2x.png') no-repeat -1242px -288px;
-	width: 34px;
-	height: 34px;
+    background: url('../imgs/spr_icons_f_2x.png') no-repeat -554px -496px;
+	width: 32px;
+	height: 32px;
 }
 
+.icon-more{
+    display: inline-block;
+    background: url('../imgs/spr_icons_2x.png') no-repeat 96.847% 14.93%;
+	width: 6px;
+	height: 30px;
+}
 
+.icon-like{
+    display: inline-block;
+    background: url('../imgs/spr_icons_2x.png') no-repeat 46.585% 85.925%;
+	width: 35px;
+	height: 30px;
+}
+
+.icon-comment{
+    display: inline-block;
+    background: url('../imgs/spr_icons_2x.png') no-repeat -1280px -1158px;
+	width: 24px;
+	height: 21px;
+}
 
 
 body{
@@ -193,6 +212,8 @@ body{
     background-color: #fff;
     margin-bottom: 10px;
     border-radius: 3px;
+    border: 1px solid #dddfe2;
+    border-radius: 3px;
 }
 
 .create_box .title{
@@ -290,6 +311,191 @@ body{
 .create_box .submit input:disabled{
     background: #9cb4d8;
 }
+
+#wrapper .contents{
+    background-color: #fff;
+    margin-bottom: 10px;
+    border: 1px solid #dddfe2;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.contents header{
+    position: relative;
+    padding: 10px 20px;
+}
+
+.contents .profile_container{
+    display: flex;
+    align-items: center;
+}
+
+.contents .profile_container .name{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.contents .profile_container .time{
+    font-size: 12px;
+    color: #616770;
+}
+
+.contents .profile_container .profile_img{
+    width: 40px;
+    height: 40px;
+}
+
+.contents .more{
+    margin-left: auto;
+    cursor: pointer;
+    padding: 10px 0;
+    position: relative;
+}
+
+.contents .more.active .hidden_menu{
+    display: block;
+}
+
+.contents .hidden_menu{
+    position: absolute;
+    right: -37px;
+    top: 30px;
+    width: 100px;
+    border-radius: 3px;
+    border: 1px solid #dddfe2;
+    padding: 0;
+    display: none;
+}
+
+.contents .hidden_menu > li{
+    padding: 5px 10px;
+    background-color: #fff;
+    text-align: center;
+    border-bottom: 1px solid rgba(221,223,226,0.57);
+    list-style: none;
+}
+
+.contents .hidden_menu >li:hover{
+    background: #ddd;
+}
+
+.contents .hidden_menu > li > *{
+    background: transparent;
+    border: none;
+    font-size: 12px;
+    outline: none;
+    cursor: pointer;
+}
+
+.contents .hidden_menu > li > a{
+    text-decoration: none;
+    color: black;
+}
+
+.contents .main_article{
+    padding: 5px 20px;
+    font-size: 14px;
+    line-height: 1.38;
+    font-weight: normal;
+}
+
+.contents .img_section{
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #dddfe2;
+}
+
+.contents .img_section .img{
+    width: 100%;
+}
+
+.contents .ajax_field{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contents .btn_container{
+    display: flex;
+    height: 42px;
+    border-top: 1px solid #dddfe2;
+    border-bottom: 1px solid #dddfe2;
+    margin: 0 10px;
+}
+
+.contents .btn_container > div{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contents .btn_container > div:hover{
+    background: #dddfe2;
+}
+
+.contents .comment_container{
+    padding: 10px 20px;
+    color:  #385898;
+}
+
+.contents .comment_container .id{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.contents .comment_container .text_container{
+    display: flex;
+    padding: 10px;
+    background: #dddfe2;
+    border-radius: 30px;
+}
+
+.contents .comment_container .name{
+    margin-right: 5px;
+}
+
+.contents .comment_container .text_field{
+    font-weight: 300;
+}
+
+.contents .comment_input{
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.contents .comment_input .input_container{
+    width: 100%;
+    padding : 7px 0;
+    border: 1px solid #ccd0d5;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.contents .comment_input .input_container input{
+    width: 90%;
+    height: 100%;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.contents .comment_input .input_container button{
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+
 
 
 
